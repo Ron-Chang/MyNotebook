@@ -1,6 +1,6 @@
-#VIM Editor   
+# VIM Editor   
   
-###1. Introduction  
+### 1. Introduction  
 `MacOS`  
 In the terminal, input  
 在Mac系統下，使用終端機輸入  
@@ -20,7 +20,7 @@ There are 2 main modes we have to know before we're starting to edit with vim:
    Also known as the `INSERT` mode. In this mode coding is the only reason,We can hit `i` to activate, and hit `Esc` to go back to the Command Mode.  
    同時也稱作`添寫`模式，按下鍵盤上的`i`即可進入，在此模式唯一能做的事就是寫入代碼，或是利用`Esc鍵`返回命令模式。  
 
-###2. Basic Command
+### 2. Basic Command
 >GUI: Graphic User Interface  
 >   +GUI Editors: Atom, Sublime...  
 >CLI: Command Line Interface  
@@ -32,7 +32,7 @@ In the `Command Mode`, If we hit `:` then we can key following alphabets to save
 + Written and Quit `:wq` (the order is important, save[w] then terminate[q].)  
 + Quit without save `:q!`(force to quit)  
   
-####[Shortcut]  
+#### [Shortcut]  
 (If you inputed something wroung before you finished command, hit `Esc` to reset)  
 0. redo last command(exclude: __moving__ and __:command__): `.`  
 1. ⬅︎:`h` ⬇︎:`j` ⬆︎:`k` ➡︎:`l` to move cursor  
@@ -50,4 +50,4 @@ In the `Command Mode`, If we hit `:` then we can key following alphabets to save
 13. Undo`u`  
 14. Visual Mode:`v` to select multiple lines, with `c` to delete.  
 15. Auto-complete `ctrl+n` with `ctrl+p` to switch.  
-16. 
+
