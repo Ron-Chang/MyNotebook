@@ -20,11 +20,13 @@ There are 2 main modes we have to know before we're starting to edit with vim:
    Also known as the `INSERT` mode. In this mode coding is the only reason,We can hit `i` to activate, and hit `Esc` to go back to the Command Mode.  
    同時也稱作`添寫`模式，按下鍵盤上的`i`即可進入，在此模式唯一能做的事就是寫入代碼，或是利用`Esc鍵`返回命令模式。  
 
-### 2. Basic Command
->GUI: Graphic User Interface  
->   +GUI Editors: Atom, Sublime...  
->CLI: Command Line Interface  
->   +CLI Editors: Vim, Nano...  
+### 2. Basic Command  
+
+a. GUI: Graphic User Interface  
+   + GUI Editors: Atom, Sublime, etc.  
+   
+b. CLI: Command Line Interface  
+   + CLI Editors: Vim, Nano, etc.  
 
 In the `Command Mode`, If we hit `:` then we can key following alphabets to save or quit the file.  
 + Written(Save) `:w`  
