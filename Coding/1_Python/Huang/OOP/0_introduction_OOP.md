@@ -17,7 +17,7 @@ on the different sopt and in the different room. but when we're mentioned about 
 2. *__My seat number is D7.__*  
 The __D7__ is a parameter of the __number__ of the __seat__.
 `seat.number = D7`
-While we need to process something we need a object,
+While we need to process something we need an object,
 When you when to a cinema, then you ask a counter for a ticket which is also means a seat. For some reason they figured out put Numbers onto seats is easy to manage and they don't want to see customers arguing with getting seats, so they offer that customer a seat with a seat number.
 Now, we can get into the cinema, if there's guy sit on __D7__, just ask him go away, that's your seat, you can also show the __D7__ on your ticket.
 
