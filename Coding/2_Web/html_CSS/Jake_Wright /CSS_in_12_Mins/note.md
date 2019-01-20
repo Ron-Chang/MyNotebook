@@ -4,6 +4,7 @@
 __Frame__:  
 <p align="center"><img src="https://raw.githubusercontent.com/Ron-Chang/MyNotebook/master/Coding/2_Web/html_CSS/Jake_Wright%20/CSS_in_12_Mins/img/div.png"/><br>
 Btw, there is a mistake in this picture,<br> It's not <del>#heads</del>, please instead of `#header`.</p>  
+
 __HTML__:  
 
 ```html
@@ -117,7 +118,7 @@ h1, h2, h3{
 
 ```
 
-__result__:  
+__Result__:  
 <p align="center">
 <img src="https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/2_Web/html_CSS/Jake_Wright%20/CSS_in_12_Mins/img/result.png?raw=true" />
 </p>  
@@ -190,7 +191,7 @@ or, use a inline css
     <title>Document</title>
 </head>
 <body>
-    <h1 style="property_name:value; color:#00f0f0;">Navigation</h1>
+    <h1 style="property_name:value; color:powderblue;">Navigation</h1>
 </body>
 </html>
 ```
