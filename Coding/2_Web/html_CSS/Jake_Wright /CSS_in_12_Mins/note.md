@@ -1,10 +1,11 @@
-#Learn CSS in 12 minutes
-<p align="right"" >__*by [Jake Wright](https://youtu.be/0afZj1G0BIE/ "Orignal Tutorial")*__</p>  
+# Learn CSS in 12 minutes
+<p align="right""> by <a href="https://youtu.be/0afZj1G0BIE/">Jake Wright</a></p> 
    
 __Frame__:  
-<center>![](img/div.png)</center>  
-<p align="center">Btw, there is a mistake in this picture,<br> It's not <del>#heads</del>, please instead of `#header`.</p>  
+<p align="center"><img src="https://raw.githubusercontent.com/Ron-Chang/MyNotebook/master/Coding/2_Web/html_CSS/Jake_Wright%20/CSS_in_12_Mins/img/div.png"/><br>
+Btw, there is a mistake in this picture,<br> It's not <del>#heads</del>, please instead of `#header`.</p>  
 __HTML__:  
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -46,9 +47,10 @@ __HTML__:
     </div>
 </body>
 </html>
+```  
 
-```
 __CSS__:  
+
 ```css
 body{
     background-color: #EEE;
@@ -116,9 +118,11 @@ h1, h2, h3{
 ```
 
 __result__:  
-<center>![](img/result.png)</center>  
+<p align="center">
+<img src="https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/2_Web/html_CSS/Jake_Wright%20/CSS_in_12_Mins/img/result.png?raw=true" />
+</p>  
 
-##Note:  
+## Note:  
 
 Basic:  
 ```css
