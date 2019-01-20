@@ -1,0 +1,20 @@
+#head{
+background: #003344; color:white;font-weight: bold; font-size: 30px; text-align: center; padding:20px;
+}
+#content{
+width:1000px; margin-left:auto; margin-right:auto;
+}
+#box{
+width:280px;padding: 10px; margin:10px;background: white;display: inline-block;vertical-align: top;
+}
+#title{
+font-size:50px;text-align:center;background:#003344;
+}
+#context{
+}
+.mid{
+color:pink;
+}
+#title.mid{
+font-size:100px;
+}
