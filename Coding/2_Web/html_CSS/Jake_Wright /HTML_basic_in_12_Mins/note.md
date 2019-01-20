@@ -11,7 +11,8 @@ e.g
 </html>
 ```
 
-Basic Structure  
+Basic Structure:  
+
 ```html
 <html>
     <head>
@@ -24,7 +25,7 @@ Basic Structure
         <p>Content 1</p>
         <p>Content 2</p>
         <p>First Content. Second Content</p>
-        <img src="sample.svg" alt="pic.-info." width=50% />
+        <img src="sample_01.svg" alt="pic.-info." width=50% />
     </body>
 </html>
 ```
@@ -33,9 +34,9 @@ result:
 
 We have `<h1></h1>` to `<h6></h6>` for the Title  
 
-| `<h1>` | `<h2>` | `<h3>` | `<h4>` | `<h5>` | `<h6>` |
-|--------|--------|--------|--------|--------|--------|
-| <h1>h1 | <h2>h1 | <h3>h1 | <h4>h4 | <h5>h5 | <h6>h6 |
+|    `<h1>`   |    `<h2>`   |    `<h3>`   |    `<h4>`   |    `<h5>`   |    `<h6>`   |
+|-------------|-------------|-------------|-------------|-------------|-------------|
+| <h1>h1</h1> | <h2>h1</h2> | <h3>h1</h3> | <h4>h4</h4> | <h5>h5</h5> | <h6>h6</h6> |
 
 `<p></p>` stand for paragraph.  
 
