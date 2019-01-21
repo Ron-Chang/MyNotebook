@@ -120,8 +120,10 @@ document.write(result);
 result:  
 RONCH  
 
-<hr />
-### Array
+<hr />  
+
+### Array  
+
 Similar as `List` in python  
   
 ```javascript
