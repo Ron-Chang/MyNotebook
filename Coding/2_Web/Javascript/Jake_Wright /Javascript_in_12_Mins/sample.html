@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <script>
+        function sayHello(who){
+            document.write("Hello, "+ who +"!<br />")
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var words = "This is ";
+        var morewords = "a sentence.";
+        var sentence = words + morewords;
+        var length = sentence.length;
+        document.write(sentence);
+        document.write("<br />");
+        document.write(length);
+        document.write("<br />");
+
+        var name = "RONCHANG";
+        var result = name.substring(0,5);
+        document.write(result);
+        document.write("<br />");
+
+        var num1 = 15;
+        var num2 = 6;
+        var total = num1 + num2;
+        document.write(total);
+        document.write("<br />");
+
+        var a = new Array(7);
+        a[0] = "cat";
+        a[1] = "dog";
+        a[3] = 95;
+        a[6] = true;
+        document.write(a);
+        document.write("<br />");
+        document.write(a[4]);
+        document.write("<br />");
+
+        var a = new Array("cat", "dog", 95, true);
+        document.write(a);
+        document.write("<br />");
+
+        var a = ["cat", "dog", 3, 5, false];
+        document.write(a);
+        document.write("<br />");
+
+        sayHello("Ron");
+        sayHello("Chang");
+
+        var a = 9;
+        if (a > 10){
+            alert(a);
+        };
+        var name = "Ron";
+        if (name != "Ron"){
+            alert("You are " + name +"!")
+        }else{
+            alert("Welcome back, Ron!")
+        };
+
+        for (i=0;i<5;i++){
+            document.write("This is iteration " + i + "<br />");
+        };
+
+    </script>
+</body>
+</html>
