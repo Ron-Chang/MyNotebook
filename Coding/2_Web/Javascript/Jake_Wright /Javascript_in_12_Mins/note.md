@@ -37,9 +37,12 @@ variable = 5;
 ```javascript
 var variable = 5;
 ```
-<hr />
-### Varialbe Type
+<hr />  
+
+### Varialbe Type  
+
 It could be a Number(integer, float),  
+
 ```javascript
 var num = 10;
 ```
@@ -52,8 +55,10 @@ or Boolean Value.
 var foo = true;
 var zoo = false;
 ```
-<hr />
+<hr />  
+
 ### Comment  
+
 We can add double slash to add a inline comment.  
 ```javascript
 //comment
@@ -146,8 +151,10 @@ document.write(a);
 >result:  
 cat,dog,3,5,false  
 
-<hr />
+<hr />  
+
 ### Fuction  
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -171,15 +178,19 @@ cat,dog,3,5,false
 Hello, Ron!  
 Hello, Chang!   
 
-<hr />
+<hr />  
+
 ### Conditions  
+
 `>`: Great than.  
 `<`: Less than.  
 `>=`: Great than or equal to.  
 `<=`: Less than or equal to.  
 `==`:  Equal to.  
 `!=`: Not equal to.  
+
 #### IF ELSE  
+
 ```javascript
 var a = 12;
 if (a > 10){
