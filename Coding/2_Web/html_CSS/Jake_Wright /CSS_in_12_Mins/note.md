@@ -1,6 +1,6 @@
 # Learn CSS in 12 minutes
-<p align="right""> by <a href="https://youtu.be/0afZj1G0BIE/">Jake Wright</a></p> 
-   
+<p align="right""> by <a href="https://youtu.be/0afZj1G0BIE/">Jake Wright</a></p>  
+  
 __Frame__:  
 <p align="center"><img src="https://raw.githubusercontent.com/Ron-Chang/MyNotebook/master/Coding/2_Web/html_CSS/Jake_Wright%20/CSS_in_12_Mins/img/div.png"/><br>
 Btw, there is a mistake in this picture,<br> It's not <del>#heads</del>, please instead of `#header`.</p>  
