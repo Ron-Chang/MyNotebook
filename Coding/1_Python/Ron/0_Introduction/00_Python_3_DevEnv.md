@@ -1,5 +1,6 @@
 # Python 3 Develop Environment  
-<p align="right""> by <a href="https://youtu.be/0afZj1G0BIE/">Ron Chang</a></p>  
+<p align="right""> by <a href="https://github.com/Ron-Chang">Ron Chang</a></p>  
+
 ### Install (Mac OS):  
 1. `⌘ + Space`, Input `Terminal` .
 2. Follow the instruction to install [Homebrew](https://brew.sh)  
@@ -7,10 +8,11 @@
 4. Install `Sublime` and install [Package Control](https://packagecontrol.io/installation)  
 5. Set a python3 environment for Sublime Text, hit `New Build System...` . ![Build systme](buildSYS.png)
 6. Following the step 5, named the file as python372.sublime-build.  
-<p color:#F31450>Attention: "/usr/local/opt/python/bin/python3.7"</p>
+*__Attention: "/usr/local/opt/python/bin/python3.7"__*  
 The path depends on where you install your python3.  
 You can check it in `terminal`, key in `which python3`  
-__*Don't forget to tick `python372` in `Tools` -> `Build System`, after you built.*__
+__*Don't forget to tick `python372` in `Tools` -> `Build System`, after you built it.*__  
+
 ```json
 {
     "cmd": ["/usr/local/opt/python/bin/python3.7", "-u", "$file"],
@@ -23,6 +25,7 @@ __*Don't forget to tick `python372` in `Tools` -> `Build System`, after you buil
 `F5` to Excute the current python file.  
 `⌘ + F5` to open IDLE.
 ![keyBinding.png](keyBinding.png)  
+
 ```json
 [
 { "keys": ["f5"], "command": "run_existing_window_command", "args":
