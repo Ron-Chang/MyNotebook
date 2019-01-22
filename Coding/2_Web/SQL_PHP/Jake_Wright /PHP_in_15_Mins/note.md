@@ -52,7 +52,7 @@ PHP 易於學習，並可高效地運行在服務器端
 
 
 ### 5. What are we going to do in this course?  
->1. Installing WAMP/MAMP
+1. Installing WAMP/MAMP
 2. PHP files
 3. Outputting strings
 4. Variables
@@ -121,7 +121,7 @@ if ($loggedIn == true){
 >result:  
 You are logged in  
 
-### Create link php file  
+### Create a page linking php file  
 
 `/index.html`  
 ```html
