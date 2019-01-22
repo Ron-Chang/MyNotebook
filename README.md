@@ -6,6 +6,8 @@
 > [Huang/VIM](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Huang/VIM)  
 
  1_`PYTHON`  
+> [Ron/0_Introduction](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/0_Introduction)  
+
 > [Huang/OOP](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/OOP)  
 > [Huang/decorator](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/decorator)  
 
