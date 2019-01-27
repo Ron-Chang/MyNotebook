@@ -6,12 +6,16 @@
 > [Huang/VIM](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Huang/VIM)  
 
  1_`PYTHON`  
-> [Ron/0_Introduction](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/0_Introduction)  
+> [Ron/Python3_Dev_Env](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Ron/0_Introduction/00_Python_3_DevEnv.md)  
+> [Ron/Trials_and_Materials](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/Trials_and_Materials)
 
 > [Huang/OOP](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/OOP)  
 > [Huang/decorator](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/decorator)  
 
 > [Ｍorvan/tkinter](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ｍorvan/tkinter)  
+
+> Good to know
+>> [FOR ELSE statement](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Ron/3_Statement/2_for_else/for_else.md)
 
  2_`Web`
 > [Jake_Wright/HTML_basic_in_12_Mins/](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/2_Web/html_CSS/Jake_Wright%20/HTML_basic_in_12_Mins)  
