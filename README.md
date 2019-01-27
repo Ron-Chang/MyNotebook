@@ -6,7 +6,7 @@
 > [Huang/VIM](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Huang/VIM)  
 
  1_`PYTHON`  
-> [Ron/Python3_Dev_Env](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Ron/0_Introduction/00_Python_3_DevEnv.md)  
+> [Ron/Python3_and_SublimeText3_Settings](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Ron/0_Introduction/00_Python_3_DevEnv.md)  
 > [Ron/Trials_and_Materials](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/Trials_and_Materials)
 
 > [Huang/OOP](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/OOP)  
