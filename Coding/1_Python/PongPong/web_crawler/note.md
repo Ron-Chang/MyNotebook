@@ -53,7 +53,7 @@ data_enlist = data["result"]["results"]
 for company in data_enlist:
     print(company["公司名稱"])
 
-with open("company_nmae.txt", "w", encoding="utf-8") as file:
+with open("company_name.txt", "w", encoding="utf-8") as file:
     for company in data_enlist:
         file.write(company["公司名稱"]+"\n")
 ```
