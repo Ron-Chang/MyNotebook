@@ -211,10 +211,10 @@ Got a domain name
 
 >Input Find:`https?://(www\.)?(\w+)(\.\w+)`  
 Input Replace:`$2$3`  
->>'https://www.google.com' -> 'google.com '  
-'http://coreyms.com' -> 'coreyms.com '  
-'https://youtube.com' -> 'youtube.com '  
-'https://www.nasa.gov' -> 'nasa.gov '  
+>>'https://www.google.com' -> 'google.com'  
+'http://coreyms.com' -> 'coreyms.com'  
+'https://youtube.com' -> 'youtube.com'  
+'https://www.nasa.gov' -> 'nasa.gov'  
 Got domain
 
 #### Read a Regex  
