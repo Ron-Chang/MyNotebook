@@ -1,5 +1,5 @@
 # FOR...ELSE STATEMENT  
-<p align="right">by <a href="https://foofish.net/for-else.html">liuzhijun</a></p>
+<p align="right">This note took from <a href="https://foofish.net/for-else.html">liuzhijun</a></p>
 
 ### if...else...  
 >Once achieved the condition, we excute if statement, or excute statement.  
