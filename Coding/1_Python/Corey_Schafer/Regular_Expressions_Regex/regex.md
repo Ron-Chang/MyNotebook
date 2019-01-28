@@ -74,7 +74,8 @@ Not a Word Character
 Whitespace (space, tab, newline)  
 #### `\S`  
 Not Whitespace (space, tab, newline)  
-<hr />
+<hr />  
+
 __*Attention: "\_\_" means is skipped in `find...` in those following smaples.*__  
 #### `\b`  
 Word Boundary  
