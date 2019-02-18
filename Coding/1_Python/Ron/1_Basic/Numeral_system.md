@@ -7,7 +7,9 @@
 >Also know as `base 60`, the second popular numeral system for nowadays.  
 People use to count minutes and seconds with it.  
 ##### 3. Binary  
->It's designed for computers and most mechines. Let machine could represent `HIGH` and `LOW` as `1` and `0` or ON and OFF when voltage processing.  
+>It's designed for computers and the most mechines. Let machine could represent `HIGH` and `LOW` as `1` and `0` or ON and OFF when voltage processing.  
+
+__*All of the datas are stored as `Binary digit` in computers, 'bit' means a digit of binary which is the most basic unit of computers.*__  
 __*電腦的資料，是以 二進位數( Binary digit ) 來保存，稱之 `位元(bit)`，二進位的單一個 位數(digit) 即電腦的最基本單位。*__  
 ##### 4. Quaternary  
 ##### 5. Octal  
