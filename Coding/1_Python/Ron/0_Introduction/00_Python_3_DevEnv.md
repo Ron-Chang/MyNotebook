@@ -147,3 +147,6 @@ You can check it in `terminal`, type in `which python3` and press `Return`.
 
 If nothing goes wrong, hit `⌘ + F5` you will see IDLE running as 3.7.2, instead of 2.x.x .
 ![Done.png](Done.png)
+
+#### Something Else:  
+[__Fix Omni markup Previewer Error__](https://github.com/timonwong/OmniMarkupPreviewer/issues/85#issuecomment-168078270)  
