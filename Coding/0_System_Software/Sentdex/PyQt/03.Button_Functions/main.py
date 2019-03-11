@@ -30,9 +30,9 @@ class Window(QMainWindow):
         btn_quit.clicked.connect(self.close_application)
         btn_quit.resize(100,30)
         btn_quit.move(250,135)
-        #print a default size
+        # print a default size
         print("btn_quit:"+str(btn_quit.sizeHint()))
-        #set to a default size
+        # set to a default size
         btn_quit.resize(btn_quit.sizeHint())
 
         btn_changeTitle = QPushButton("Change",self)
