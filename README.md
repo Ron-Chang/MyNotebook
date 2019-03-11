@@ -4,6 +4,7 @@
 ## Codeing  
  0_`SYSTEM_&_SOFTWARE`  
 > [Huang/VIM](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Huang/VIM)  
+> [Sentdex/PyQt](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt)  
 
  1_`PYTHON`  
 > [Ron/Python3_and_SublimeText3_Settings](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Ron/0_Introduction/00_Python_3_DevEnv.md)  
