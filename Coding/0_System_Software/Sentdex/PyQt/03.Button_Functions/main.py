@@ -30,11 +30,16 @@ class Window(QMainWindow):
         btn_quit.clicked.connect(self.close_application)
         btn_quit.resize(100,30)
         btn_quit.move(250,135)
+        #print a default size
+        print("btn_quit:"+str(btn_quit.sizeHint()))
+        #set to a default size
+        btn_quit.resize(btn_quit.sizeHint())
 
         btn_changeTitle = QPushButton("Change",self)
         btn_changeTitle.clicked.connect(self.changeTitle)
         btn_changeTitle.resize(100,30)
         btn_changeTitle.move(150,135)
+
         self.show()
 
     def changeTitle(self):
@@ -45,6 +50,7 @@ class Window(QMainWindow):
             self.setWindowTitle("PyQt Turtorial")
         else:
             self.setWindowTitle("")
+
 
     def close_application(self):
         sys.exit("Function has been terminated.")
