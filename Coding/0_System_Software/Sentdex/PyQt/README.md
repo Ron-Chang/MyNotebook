@@ -6,3 +6,5 @@ The is note taking from [Sentdex's tutorial](https://www.youtube.com/watch?list=
 >[03.Button Functions](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/03.Button_Functions)  
 >[04.Main Menus](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/04.Main_Menus)  
 >[05.Tool Bars](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/05.Tool_Bars)  
+>[06.Pop Up Message](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/06.Pop_up_message)  
+>[07.Checkbox](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/07.Checkbox)  
