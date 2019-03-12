@@ -33,22 +33,23 @@ In the zetcode example, on Windows the Alt key activates the menu bar,
 and he uses &File, meaning Alt-F would select the file menu.
 The letter that follows the ampersand is the hot key.
 
-Check here: [stackoverflow-45093040](https://stackoverflow.com/a/45093040)  
+Check here:  
+[stackoverflow-45093040](https://stackoverflow.com/a/45093040)  
 
 #### 3. MacOS Keyword issue  
->Easist way to fix it, use " &Exit" instead of "&Exit"
-or
-mainMenu = self.menuBar()
-mainMenu.setNativeMenuBar(False)
+>Easist way to fix it, use " &Exit" instead of "&Exit"  
+or  
+mainMenu = self.menuBar()  
+mainMenu.setNativeMenuBar(False)  
 
-Check here:
-[zetcode/menustoolbars](http://zetcode.com/gui/pyqt5/menustoolbars)
-[stackoverflow-45171461](https://stackoverflow.com/a/45171461)
+Check here:  
+[zetcode/menustoolbars](http://zetcode.com/gui/pyqt5/menustoolbars)  
+[stackoverflow-45171461](https://stackoverflow.com/a/45171461)  
 
 #### 4. Set Shortcut with MacOS Function Key  
 
 `extractAction.setShortcut("Meta+Q")`  
-__*Be careful of case sensitive*__  
+__*Beware of case sensitive*__  
 
 |    Mac    |  pyqt |
 |-----------|-------|
@@ -63,9 +64,9 @@ Dispaly Status Bar at widow bottom. It shows information if your mouse overed th
 
 #### 6. Add `save` and `save As` into `Save` menu in `File` menu
 `File`  
-- - ⎣`Save`  
-- - - - ⎜Save  
-- - - - ⎣Save As  
+- ⎣`Save`  
+- - ⎜Save  
+- - ⎣Save As  
 
 
 ```python
