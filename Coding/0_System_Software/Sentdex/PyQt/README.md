@@ -4,4 +4,5 @@ The is note taking from [Sentdex's tutorial](https://www.youtube.com/watch?list=
 >[01.Application Structure](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/01.Application_Structure)  
 >[02.Buttons](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/02.Buttons)  
 >[03.Button Functions](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/03.Button_Functions)  
->[04.Main Menus](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/05.Main_Menus)  
+>[04.Main Menus](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/04.Main_Menus)  
+>[05.Tool Bars](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/05.Tool_Bars)  
