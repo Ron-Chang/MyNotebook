@@ -1,4 +1,4 @@
-# Tutorial 04 - Main Menus
+# Tutorial 05 - Tool Bars
 
 1. Create "Exit" in "File" main menus
 ```python

@@ -19,7 +19,7 @@ from PyQt5.QtCore import QCoreApplication
 # QCoreApplication is a module which is including button events
 
 from PyQt5.QtGui import *
-from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QPushButton
+from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QPushButton, qApp
 
 
 class Window(QMainWindow):
@@ -28,7 +28,7 @@ class Window(QMainWindow):
         super(Window, self).__init__()
         self.setGeometry(100,100,500,300)
         self.setWindowTitle("PyQt Turtorial")
-        self.setWindowIcon(QIcon("test.png"))
+        self.setWindowIcon(QIcon("myicon.png"))
         # Above this line
         # Make a platform(It's a similar concept as 'composition' in AfterEffect)
 
@@ -42,8 +42,10 @@ class Window(QMainWindow):
         # Click Event
         # button.clicked.connect()
 
-        # Default Quit Function
+        # Default Quit Function_1
         # QCoreApplication.instance().quit
+        # Default Quit Function_2
+        # qApp.quit
 
         btn.resize(100,30)
         # Give the button size

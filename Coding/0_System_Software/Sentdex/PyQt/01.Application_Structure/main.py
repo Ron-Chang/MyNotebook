@@ -13,7 +13,7 @@ class Window(QWidget):
         super(Window, self).__init__()
         self.setGeometry(100,100,500,300)
         self.setWindowTitle("PyQt Turtorial")
-        self.setWindowIcon(QIcon("test.png"))
+        self.setWindowIcon(QIcon("myicon.icns"))
         self.show()
 
 app = QApplication(sys.argv)
