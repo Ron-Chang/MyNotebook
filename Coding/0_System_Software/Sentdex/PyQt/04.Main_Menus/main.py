@@ -67,7 +67,7 @@ class Window(QMainWindow):
         saveAction.setStatusTip("Save File")
         saveAction.triggered.connect(self.saveFile)
 
-        saveAsAction = QAction(" &Save", self)
+        saveAsAction = QAction(" &Save As", self)
         saveAsAction.setShortcut("Ctrl+Shift+S")
         saveAsAction.setStatusTip("Save as File")
         saveAsAction.triggered.connect(self.saveAsFile)

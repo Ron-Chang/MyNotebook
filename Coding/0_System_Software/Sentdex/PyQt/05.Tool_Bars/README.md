@@ -1,6 +1,6 @@
 # Tutorial 05 - Tool Bars
 
-1. Create "Exit" in "File" main menus
+1. Understand how to addToolBar and QIcon
 ```python
 '''
 class Window(QMainWindow):
@@ -9,19 +9,43 @@ class Window(QMainWindow):
         .
         .
         .
-        self.setWindowIcon(QIcon("test.png"))
+        self.main_ui()
         '''
-        extractAction = QtGui.QAction("&Let's Get Out Of Here!",self)
-        extractAction.setShortcut("Command+T")
-        extractAction.setStatusTip("Leave The Application") 
-        # Set status bar tips
-        
-        extractAction.triggered.connect(self.close_application)
-        self.statusBar() 
-        # Dispaly Status Bar
+    def main_ui(self):
+        btn_quit = QPushButton("Quit",self)
+        btn_quit.clicked.connect(self.close_application)
+        btn_quit.resize(100,30)
+        btn_quit.move(250,135)
 
-        mainMenu = self.menuBar()
-        fileMenu = mainMenu.addMenu("&File")
-        fileMenu.addAction(extractAction)
+        btn_changeTitle = QPushButton("Change",self)
+        btn_changeTitle.clicked.connect(self.changeTitle)
+        btn_changeTitle.resize(100,30)
+        btn_changeTitle.move(150,135)
+
+        extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
+        extractAction.triggered.connect(self.close_application)
+        # extractAction = triggered.connect(self.close_application())
+        # It will activate close_application immediatly
+
+        extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
+        extractAction.triggered.connect(self.close_application)
+
+        openAction = QAction(QIcon("open.png"), "Open the File", self)
+        openAction.triggered.connect(self.openFile)
+
+        saveAction = QAction(QIcon("save.png"), "save the File", self)
+        saveAction.triggered.connect(self.saveFile)
+
+        changeAction = QAction(QIcon("settings.png"), "change the Window Title", self)
+        changeAction.triggered.connect(self.changeTitle)
+
+        self.toolBar = self.addToolBar("MainToolBar")
+
+        self.toolBar.addAction(openAction)
+        self.toolBar.addAction(saveAction)
+        self.toolBar.addAction(changeAction)
+        self.toolBar.addAction(extractAction)
+
+        self.show()
 ```
 

@@ -28,7 +28,7 @@ class Window(QMainWindow):
         super(Window, self).__init__()
         self.setGeometry(100,100,500,300)
         self.setWindowTitle("PyQt Turtorial")
-        self.setWindowIcon(QIcon("myicon.png"))
+        # self.setWindowIcon(QIcon("myicon.png"))
         # Above this line
         # Make a platform(It's a similar concept as 'composition' in AfterEffect)
 
@@ -57,6 +57,7 @@ class Window(QMainWindow):
 def main():
 
     app = QApplication(sys.argv)
+    app.setWindowIcon(QIcon("myicon.png"))
     GUI = Window()
     sys.exit(app.exec_())
 
