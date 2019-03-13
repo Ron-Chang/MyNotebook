@@ -1,7 +1,7 @@
 '''
-Tutorial 04 Main Menus
+Tutorial 05 Tool Bars
 
-Customize button function
+Add Toolbar with icon and function
 
 '''
 import sys

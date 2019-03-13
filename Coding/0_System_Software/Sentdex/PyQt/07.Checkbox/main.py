@@ -1,16 +1,18 @@
 '''
-Tutorial 04 Main Menus
+Tutorial 07 Checkbox
 
-Customize button function
-
+add CheckBox
+use CheckBox
+toggle the CheckBox as default
 '''
 import sys
-from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtCore import QCoreApplication, Qt
 # QCoreApplication is a module which is including button events
 
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QWidget, QMainWindow, QMessageBox
-from PyQt5.QtWidgets import QApplication, QPushButton, QAction
+from PyQt5.QtWidgets import QApplication, QAction
+from PyQt5.QtWidgets import QPushButton, QCheckBox
 
 
 class Window(QMainWindow):
@@ -23,12 +25,6 @@ class Window(QMainWindow):
 
         extractAction = QAction(" &Exit", self)
         extractAction.setShortcut("Meta+Q")
-        """MacOS Function Key
-        ⌘Command: Ctrl
-        ⌥Option: Alt
-        ⌃Control: Meta
-        ⇪Shift: Shift
-        """
 
         extractAction.setStatusTip("Leave The Application")
         extractAction.triggered.connect(self.close_application)
@@ -82,31 +78,24 @@ class Window(QMainWindow):
         btn_changeTitle.resize(100,30)
         btn_changeTitle.move(150,135)
 
-        extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
-        extractAction.triggered.connect(self.close_application)
-        # extractAction = triggered.connect(self.close_application())
-        # It will activate close_application immediatly
-
-        extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
-        extractAction.triggered.connect(self.close_application)
-
-        openAction = QAction(QIcon("open.png"), "Open the File", self)
-        openAction.triggered.connect(self.openFile)
-
-        saveAction = QAction(QIcon("save.png"), "save the File", self)
-        saveAction.triggered.connect(self.saveFile)
-
-        changeAction = QAction(QIcon("settings.png"), "change the Window Title", self)
-        changeAction.triggered.connect(self.changeTitle)
-
-        self.toolBar = self.addToolBar("MainToolBar")
-
-        self.toolBar.addAction(openAction)
-        self.toolBar.addAction(saveAction)
-        self.toolBar.addAction(changeAction)
-        self.toolBar.addAction(extractAction)
+        checkBox = QCheckBox("Enlarge Window", self)
+        checkBox.move(350,140)
+        checkBox.resize(checkBox.sizeHint())
+        # checkBox.toggle()
+        checkBox.stateChanged.connect(self.enlargeWindow)
 
         self.show()
+
+    def enlargeWindow(self, state):
+        """
+        The first parameter has to be self is needed.
+        The second one is state and it could be any words,
+        but it has to be match.in a condition statement.
+        """
+        if state == Qt.Checked:
+            self.setGeometry(100,100,800,600)
+        else:
+            self.setGeometry(100,100,500,300)
 
     def changeTitle(self):
         window_title = self.windowTitle()

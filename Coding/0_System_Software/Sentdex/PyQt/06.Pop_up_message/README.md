@@ -1,4 +1,4 @@
-# Tutorial 05 - Tool Bars
+# Tutorial 06 -  Pop up Message
 
 1. Understand how to addToolBar
 ```python

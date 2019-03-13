@@ -1,7 +1,7 @@
 '''
-Tutorial 04 Main Menus
+Tutorial 06 Pop up Message
 
-Customize button function
+Make pop up message
 
 '''
 import sys

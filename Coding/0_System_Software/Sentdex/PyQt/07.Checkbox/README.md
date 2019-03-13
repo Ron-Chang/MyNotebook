@@ -1,6 +1,8 @@
-# Tutorial 05 - Checkbox
+# Tutorial 07 - Checkbox
 
-1. Understand how to addToolBar
+#### 1. How to add CheckBox  
+>PyQt5.QtWidgets.QCheckBox  
+
 ```python
 '''
 class Window(QMainWindow):
@@ -9,44 +11,48 @@ class Window(QMainWindow):
         .
         .
         .
-    def changeTitle(self):
-        window_title = self.windowTitle()
-
-        if window_title == "":
-            self.setWindowTitle("PyQt Turtorial")
-        else:
-            self.setWindowTitle("")
+        self.main_ui()
         '''
-    def openFile(self):
-        openAction = QMessageBox.information(self, "openFile",
-                                            "Open a file?\n"+
-                                            "I'm sorry, it won't happen right now.")
-    def saveFile(self):
-        openAction = QMessageBox.warning(self, "saveFile",
-                                            "Save a file?\n"+
-                                            "I'm sorry, it won't happen right now.")
-
-    def saveAsFile(self):
-        openAction = QMessageBox.critical(self, "openAsFile",
-                                            "Save as to?\n"+
-                                            "I'm sorry, it won't happen right now.")
-    def close_application(self):
-        choice = QMessageBox.warning(self, "Extract!",
-                                            "Are You Going to Leave Now?",
-                                            QMessageBox.Yes | QMessageBox.No)
-        if choice == QMessageBox.Yes:
-            print("Function has been terminated.")
-            sys.exit()
-        else:
-            pass
-            # do nothing
+    def main_ui(self):
+    """
+    btn_quit = QPushButton("Quit",self)
+    ...
+    btn_changeTitle.move(150,135)
+    """
+    checkBox = QCheckBox("Enlarge Window", self)
+    checkBox.move(350,140)
+    checkBox.resize(checkBox.sizeHint())
+    checkBox.stateChanged.connect(self.enlargeWindow)
 ```
->PyQt5.QtGui.QMessageBox( ) defined icon  
 
-|         Type        |   Keyword   |                      Function                      |
-|---------------------|-------------|----------------------------------------------------|
-| ![quest](quest.png) | question    | For asking a question during normal operations.    |
-| ![info](info.png)   | information | For reporting information about normal operations. |
-| ![warn](warn.png)   | warning     | For reporting non-critical errors.                 |
-| ![crit](crit.png)   | critical    | For reporting critical errors.                     |
-|                     |             |                                                    |
+>#### 2. How to use CheckBox  
+>PyQt5.QtCore.Qt.Checked  
+
+```python
+class Window(QMainWindow):
+
+    def enlargeWindow(self, state):
+        """
+        The first parameter has to be self is needed.
+        The second one is state and it could be any words,
+        but it has to be match in the statement.
+        """
+        if state == Qt.Checked:
+            self.setGeometry(100,100,800,600)
+        else:
+            self.setGeometry(100,100,500,300)
+```
+
+The first parameter has to be `self` is needed. 
+The second one `state` which could be any words, 
+but it has to be match in the statement. 
+
+#### 2. How to make it toggle as the default state
+
+```python
+checkBox = QCheckBox("Enlarge Window", self)
+checkBox.move(350,140)
+checkBox.resize(checkBox.sizeHint())
+checkBox.toggle()
+checkBox.stateChanged.connect(self.enlargeWindow)
+```
