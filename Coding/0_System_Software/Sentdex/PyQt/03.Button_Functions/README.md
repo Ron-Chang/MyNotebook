@@ -39,8 +39,8 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QPushButton
         # quit("Function has been terminated.")
 ```
 
-#### 3. Changeing window title through to click a button.  
->If window title is an empty string, then assign "PyQt Turtorial", otherwise assign ""(an empty string).
+#### 3. Changing window title through to click a button.  
+>If window title is an empty string, then assign "PyQt Tutorial", otherwise assign ""(an empty string).
 
 ```python
  class Window(QMainWindow):
@@ -57,7 +57,7 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QPushButton
         # Get string from windowTitle()
         # (QWidget or QMainWindow).windowTitle()
         if window_title == "":
-            self.setWindowTitle("PyQt Turtorial")
+            self.setWindowTitle("PyQt Tutorial")
         else:
             self.setWindowTitle("")
 ```

@@ -19,8 +19,8 @@ class Window(QMainWindow):
         extractAction.triggered.connect(self.close_application)
         
         self.statusBar() 
-        # Dispaly Status Bar
-        # It show information everytime your mouse over the button which you "setStatusTip"
+        # Display Status Bar
+        # It show information every time your mouse over the button which you "setStatusTip"
 
         mainMenu = self.menuBar()
         fileMenu = mainMenu.addMenu("&File")
@@ -37,7 +37,7 @@ Check here:
 [stackoverflow-45093040](https://stackoverflow.com/a/45093040)  
 
 #### 3. MacOS Keyword issue  
->Easist way to fix it, use " &Exit" instead of "&Exit"  
+>Easiest way to fix it, use " &Exit" instead of "&Exit"  
 or  
 mainMenu = self.menuBar()  
 mainMenu.setNativeMenuBar(False)  
@@ -59,7 +59,7 @@ __*Beware of case sensitive*__
 | ⇪ Shift   | Shift |
 
 #### 5. What is statusBar?  
-Dispaly Status Bar at widow bottom. It shows information if your mouse overed the button.
+Display Status Bar at widow bottom. It shows information if your mouse over the button.
 
 
 #### 6. Add `save` and `save As` into `Save` menu in `File` menu

@@ -18,7 +18,7 @@ class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
         self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Turtorial")
+        self.setWindowTitle("PyQt Tutorial")
         self.setWindowIcon(QIcon("test.png"))
         # Above this line
         # Make a platform(It's a similar concept as 'composition' in AfterEffect)
@@ -36,7 +36,7 @@ class Window(QMainWindow):
         Check:
         http://zetcode.com/gui/pyqt5/menustoolbars/
         https://stackoverflow.com/a/45171461
-        Easist way to fix it, use " &Exit" instead of "&Exit"
+        Easiest way to fix it, use " &Exit" instead of "&Exit"
 
         or
 
@@ -78,8 +78,8 @@ class Window(QMainWindow):
         changeTitleFunction.triggered.connect(self.changeTitle)
 
         self.statusBar()
-        # Dispaly Status Bar at widow bottom
-        # It show information everytime your mouse over the button which you "setStatusTip"
+        # Display Status Bar at widow bottom
+        # It show information every time your mouse over the button which you "setStatusTip"
 
         mainMenu = self.menuBar()
         mainMenu.setNativeMenuBar(False)
@@ -117,7 +117,7 @@ class Window(QMainWindow):
         # Get string from windowTitle()
         # (QWidget or QMainWindow).windowTitle()
         if window_title == "":
-            self.setWindowTitle("PyQt Turtorial")
+            self.setWindowTitle("PyQt Tutorial")
         else:
             self.setWindowTitle("")
 

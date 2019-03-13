@@ -8,5 +8,5 @@
 self.setWindowIcon(QIcon("iconname.png"))
 ```
 
-__*there is an issue happen in MacOS, It dosen't display correctly.*__
+__*there is an issue happen in MacOS, It doesn't display correctly.*__
 

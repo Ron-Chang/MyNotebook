@@ -45,7 +45,7 @@ window.show()
 ```
 
 Keep app open, until user close it.
-```pyhton
+```python
 sys.exit(app.exec_())
 ```
 

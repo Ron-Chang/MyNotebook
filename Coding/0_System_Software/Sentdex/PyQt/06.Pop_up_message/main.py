@@ -18,7 +18,7 @@ class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
         self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Turtorial")
+        self.setWindowTitle("PyQt Tutorial")
         self.setWindowIcon(QIcon("test.png"))
 
         extractAction = QAction(" &Exit", self)
@@ -85,7 +85,7 @@ class Window(QMainWindow):
         extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
         extractAction.triggered.connect(self.close_application)
         # extractAction = triggered.connect(self.close_application())
-        # It will activate close_application immediatly
+        # It will activate close_application immediately
 
         extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
         extractAction.triggered.connect(self.close_application)
@@ -112,7 +112,7 @@ class Window(QMainWindow):
         window_title = self.windowTitle()
 
         if window_title == "":
-            self.setWindowTitle("PyQt Turtorial")
+            self.setWindowTitle("PyQt Tutorial")
         else:
             self.setWindowTitle("")
 
@@ -134,7 +134,7 @@ class Window(QMainWindow):
         choice = QMessageBox.question(self, "Extract!",
                                             "Are You Going to Leave Now?",
                                             QMessageBox.Yes | QMessageBox.No)
-        """QMessageBox includin
+        """QMessageBox including
         question    For asking a question during normal operations.
         information For reporting information about normal operations.
         warning For reporting non-critical errors.

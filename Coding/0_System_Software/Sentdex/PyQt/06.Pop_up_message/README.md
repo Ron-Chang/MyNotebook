@@ -13,7 +13,7 @@ class Window(QMainWindow):
         window_title = self.windowTitle()
 
         if window_title == "":
-            self.setWindowTitle("PyQt Turtorial")
+            self.setWindowTitle("PyQt Tutorial")
         else:
             self.setWindowTitle("")
         '''

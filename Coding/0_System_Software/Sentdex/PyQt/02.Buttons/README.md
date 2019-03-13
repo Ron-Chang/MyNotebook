@@ -19,7 +19,7 @@ class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
         self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Turtorial")
+        self.setWindowTitle("PyQt Tutorial")
         self.setWindowIcon(QIcon("myicon.png"))
         # Above this line
         # Make a platform(It's a similar concept as 'composition' in AfterEffect)

@@ -12,7 +12,7 @@ class Window(QWidget):
     def __init__(self):
         super(Window, self).__init__()
         self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Turtorial")
+        self.setWindowTitle("PyQt Tutorial")
         # self.setWindowIcon(QIcon("myicon.icns"))
         self.show()
 

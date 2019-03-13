@@ -25,7 +25,7 @@ class Window(QMainWindow):
         extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
         extractAction.triggered.connect(self.close_application)
         # extractAction = triggered.connect(self.close_application())
-        # It will activate close_application immediatly
+        # It will activate close_application immediately
 
         extractAction = QAction(QIcon("exit.png"), "Exit the Function", self)
         extractAction.triggered.connect(self.close_application)
