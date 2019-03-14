@@ -1,32 +1,19 @@
+# Tutorial 08 - Progressbar
+
+#### 1. How to add Progressbar  
+>PyQt5.QtWidgets.QProgressBar
+
+###### 1. add a download button, and add a button shortcut.
+```python
 '''
-Tutorial 08 Progress Bar
-
-add Shortcut
-add Progress Bar
-set Progress Bar position and size
-
-'''
-import sys
-from PyQt5.QtCore import QCoreApplication, Qt
-from PyQt5.QtWidgets import QMessageBox, QPushButton, QProgressBar
-from PyQt5.QtWidgets import QWidget, QApplication, QAction
-
-
-class Window(QWidget):
+class Window(QMainWindow):
 
     def __init__(self):
-        super(Window, self).__init__()
-        self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Tutorial")
-
-        # Add a invisible shortcut
-        # DownloadAction = QAction(" &Download", self)
-        # DownloadAction.setShortcut("Meta+D")
-        # DownloadAction.triggered.connect(self.download)
-        # self.addAction(DownloadAction)
-
+        .
+        .
+        .
         self.main_ui()
-
+        '''
     def main_ui(self):
         """What's the difference
         btn_doIt = QPushButton("Do it",self)
@@ -46,6 +33,14 @@ class Window(QWidget):
         self.btn_download.clicked.connect(self.download)
 
         self.show()
+```
+###### 2. connect to download function which including progressbar
+
+>#### 2. How to use Progressbar  
+>PyQt5.QtCore.Qt.Checked  
+
+```python
+class Window(QMainWindow):
 
     def download(self):
         self.completed = 0
@@ -74,17 +69,33 @@ class Window(QWidget):
                 else:
                     self.setWindowTitle("downloading ")
                 """
+```
 
+The first parameter has to be `self` is needed. 
+The second one `state` which could be any words, 
+but it has to be match in the statement. 
+
+#### 2. How to give a notice after download finished.
+
+```python
+class Window(QMainWindow):
 
     def downloadCompleted(self):
-        completedNotice = QMessageBox.information(self, "completed", "Completed!")
+            completedNotice = QMessageBox.information(self, "completed", "Completed!")
+```
 
+__*Add an invisible shortcut*__  
+```python
+class Window(QWidget):
+    def __init__(self):
+        super(Window, self).__init__()
+        self.setGeometry(100,100,500,300)
+        self.setWindowTitle("PyQt Tutorial")
 
-def main():
+        # Add a invisible shortcut
+        DownloadAction = QAction(" &Download", self)
+        DownloadAction.setShortcut("Meta+D")
+        DownloadAction.triggered.connect(self.download)
+        self.addAction(DownloadAction)
 
-    app = QApplication(sys.argv)
-    GUI = Window()
-    sys.exit(app.exec_())
-
-
-main()
+```
