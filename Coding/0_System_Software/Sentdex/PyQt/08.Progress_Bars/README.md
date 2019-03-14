@@ -36,9 +36,6 @@ class Window(QMainWindow):
 ```
 ###### 2. connect to download function which including progressbar
 
->#### 2. How to use Progressbar  
->PyQt5.QtCore.Qt.Checked  
-
 ```python
 class Window(QMainWindow):
 
@@ -47,8 +44,21 @@ class Window(QMainWindow):
 
         while self.completed < 100:
             self.completed += 0.01
-
             self.progress.setValue(self.completed)
+```
+
+
+#### 2. How to use Progressbar  
+```python
+class Window(QMainWindow):
+
+    def download(self):
+        self.completed = 0
+
+        while self.completed < 100:
+            self.completed += 0.01
+            self.progress.setValue(self.completed)
+
             percentage = "{:05.2f}".format(self.completed)+"\r"
             sys.stdout.write(percentage)
             sys.stdout.flush()
@@ -57,25 +67,9 @@ class Window(QMainWindow):
                 self.setWindowTitle("DOWNLOADED!")
             else:
                 self.setWindowTitle("downloading . . . ")
-                """animation
-                window_title = self.windowTitle()
-
-                if window_title == "downloading ":
-                    self.setWindowTitle("downloading . ")
-                elif window_title == "downloading .":
-                    self.setWindowTitle("downloading . . ")
-                elif window_title == "downloading .":
-                    self.setWindowTitle("downloading . . . ")
-                else:
-                    self.setWindowTitle("downloading ")
-                """
 ```
 
-The first parameter has to be `self` is needed. 
-The second one `state` which could be any words, 
-but it has to be match in the statement. 
-
-#### 2. How to give a notice after download finished.
+#### 3. How to give a notice after download finished.
 
 ```python
 class Window(QMainWindow):
