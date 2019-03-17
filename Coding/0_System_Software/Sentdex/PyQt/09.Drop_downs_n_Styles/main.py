@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QMessageBox, QPushButton, QProgressBar, QLabel, QComboBox
-from PyQt5.QtWidgets import QStyleFactory, QLabel, QComboBox, QMainWindow
-from PyQt5.QtWidgets import QWidget, QApplication, QAction, QHBoxLayout, QVBoxLayout
+from PyQt5.QtWidgets import QStyleFactory, QLabel, QComboBox, QMainWindow, QSizePolicy, QRadioButton
+from PyQt5.QtWidgets import QWidget, QApplication, QAction, QHBoxLayout, QSpacerItem, QVBoxLayout
 from PyQt5.QtCore import QCoreApplication, Qt
 from PyQt5.QtGui import *
 
@@ -67,15 +67,17 @@ class FormWidget(QWidget):
     def __init__(self,parent=None):
         super(FormWidget, self).__init__(parent)
         #水平佈局
-        Hloyout=QHBoxLayout()
-        Vloyout=QVBoxLayout()
+        self.Hloyout_1=QHBoxLayout()
+        self.Hloyout_2=QHBoxLayout()
+        self.Hloyout_3=QHBoxLayout()
+        self.Vloyout_1=QVBoxLayout()
+        self.Vloyout_2=QVBoxLayout()
+        self.Vloyout_3=QVBoxLayout()
 
         #實例化標籤與列表控件
-        self.styleLabel=QLabel('Set Style')
+        self.styleLabel_2=QLabel('Set Style ComboBox')
         self.styleComboBox=QComboBox()
 
-        self.progress = QProgressBar(self)
-        self.progress.setGeometry(50, 110, 400, 20)
         #從QStyleFactory中增加多個顯示樣式到列表控件
         self.styleComboBox.addItems(QStyleFactory.keys())
 
@@ -91,18 +93,80 @@ class FormWidget(QWidget):
         #通過combobox控件選擇窗口風格
         self.styleComboBox.activated[str].connect(self.handlestyleChanged)
 
+        self.progress = QProgressBar(self)
+        self.progress.setGeometry(0,0,10,10)
+
+        '''QRadioButton
+        self.styleLabel_1=QLabel('Set Style')
+        self.styleLabel_1.setAlignment(Qt.AlignCenter)
+        self.macintosh = QRadioButton(self)
+        self.macintosh.setObjectName("macintosh")
+        self.macintosh.setText("macintosh")
+        self.windows = QRadioButton(self)
+        self.windows.setObjectName("windows")
+        self.windows.setText("windows")
+        self.fusion = QRadioButton(self)
+        self.fusion.setObjectName("fusion")
+        self.fusion.setText("fusion")
+        '''
+
+        # Add a button shortcut
+        self.btn_download = QPushButton("Download",self)
+        self.btn_download.setShortcut("Meta+D")
+        # self.btn_download.resize(200,60)
+        # self.btn_download.move(150,135)
+        self.btn_download.clicked.connect(self.download)
+
+        spacerItem1 = QSpacerItem(0, 40,QSizePolicy.Minimum, QSizePolicy.Expanding)
+        spacerItem2 = QSpacerItem(226, 0, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        #QSizePolicy
+        # - Fixed
+        # - Minimum
+        # - Maximum
+        # - Preferred
+        # - MinimumExpanding
+        # - Expanding
+        # - Ignored
+
         # 添加控件到佈局，設置窗口佈局
+        self.Vloyout_1.addItem(spacerItem2)
+        '''QRadioBox
+        self.Vloyout_1.addWidget(self.macintosh)
+        self.Vloyout_1.addWidget(self.windows)
+        self.Vloyout_1.addWidget(self.fusion)
+        self.Vloyout_1.addItem(spacerItem1)
+        '''
 
-        Hloyout.addWidget(self.styleLabel)
-        Hloyout.addWidget(self.styleComboBox)
-        Hloyout.addWidget(self.progress)
-        self.setLayout(Hloyout)
+        self.Hloyout_1.addLayout(self.Vloyout_1)
+        self.Hloyout_1.addLayout(self.Vloyout_2)
+        self.Hloyout_1.addLayout(self.Vloyout_3)
+
+        self.Vloyout_2.addLayout(self.Hloyout_2)
+        self.Vloyout_2.addLayout(self.Hloyout_3)
+        self.Vloyout_2.addItem(spacerItem1)
 
 
+        self.Hloyout_2.addWidget(self.styleLabel_2)
+        self.Hloyout_2.addWidget(self.styleComboBox)
+
+        self.Hloyout_3.addWidget(self.progress)
+        self.Hloyout_3.addWidget(self.btn_download)
+
+        self.Vloyout_3.addItem(spacerItem2)
+
+        self.setLayout(self.Hloyout_1)
 
     #改變窗口風格
     def handlestyleChanged(self,style):
         QApplication.setStyle(style)
+
+    def download(self):
+        self.completed = 0
+
+        while self.completed < 100:
+            self.completed += 0.1
+
+            self.progress.setValue(self.completed)
 
     def downloadCompleted(self):
         completedNotice = QMessageBox.information(self, "completed", "Completed!")
