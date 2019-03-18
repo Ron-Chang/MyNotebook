@@ -1,3 +1,14 @@
+'''
+Tutorial 09 Drop down and Styles
+
+add Drop down menu (ComboBox)
+set OS supported sample style
+set widget in MainWindow, allow to use layout, main menu and tool bar
+set borderless wndowed mode
+set a function to activate ComboBox value
+add layout
+'''
+
 import sys
 from PyQt5.QtWidgets import QMessageBox, QPushButton, QProgressBar, QLabel, QComboBox
 from PyQt5.QtWidgets import QStyleFactory, QLabel, QComboBox, QMainWindow, QSizePolicy, QRadioButton
@@ -11,8 +22,9 @@ class Winodw(QMainWindow):
 
         super(Winodw, self).__init__(parent)
         self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Tutorial")
+        self.setWindowTitle("PyQt Tutorial 09")
 
+        # 調用 FormWidget 進入MainWindow
         self.form_widget = FormWidget(self)
 
         self.setCentralWidget(self.form_widget)
@@ -35,15 +47,24 @@ class Winodw(QMainWindow):
         # 設定Main Menu
         mainMenu = self.menuBar()
 
-        #禁用原生MenuBar
+        # 禁用原生MenuBar
         mainMenu.setNativeMenuBar(False)
         fileMenu = mainMenu.addMenu(" &File")
         fileMenu.addAction(extractAction)
 
-        # 設置無邊框窗口樣式
-        # self.setWindowFlags(Qt.FramelessWindowHint)
-        #子窗口，窗口無按鈕 ，但有標題，可注釋掉觀察效果
+        # 設置無邊框視窗樣式
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        #子視窗，視窗無按鈕 ，但有標題，可注釋掉觀察效果
         # self.setWindowFlags(Qt.SubWindow)
+
+        #透過桌面模組得到屏幕的尺寸
+        desktop=QApplication.desktop()
+        #得到桌面可顯示的尺寸
+        rect=desktop.availableGeometry()
+        #設置視窗為屏幕可以顯示尺寸
+        self.setGeometry(rect)
+        #顯示視窗
+        self.show()
 
     def close_application(self):
         choice = QMessageBox.question(self, "Extract!",
@@ -67,38 +88,38 @@ class FormWidget(QWidget):
     def __init__(self,parent=None):
         super(FormWidget, self).__init__(parent)
         #水平佈局
-        self.Hloyout_1=QHBoxLayout()
-        self.Hloyout_2=QHBoxLayout()
-        self.Hloyout_3=QHBoxLayout()
-        self.Vloyout_1=QVBoxLayout()
-        self.Vloyout_2=QVBoxLayout()
-        self.Vloyout_3=QVBoxLayout()
+        self.Hlayout_1=QHBoxLayout()
+        self.Hlayout_2=QHBoxLayout()
+        self.Hlayout_3=QHBoxLayout()
+        self.Vlayout_1=QVBoxLayout()
+        self.Vlayout_2=QVBoxLayout()
+        self.Vlayout_3=QVBoxLayout()
 
-        #實例化標籤與列表控件
-        self.styleLabel_2=QLabel('Set Style ComboBox')
+        #實例化標籤與列表模組
+        self.styleLabel_1=QLabel('Set Style')
         self.styleComboBox=QComboBox()
 
-        #從QStyleFactory中增加多個顯示樣式到列表控件
+        #從QStyleFactory中增加多個顯示樣式到列表模組
         self.styleComboBox.addItems(QStyleFactory.keys())
 
-        #選擇當前窗口的風格
+        #選擇當前視窗的風格
         index=self.styleComboBox.findText(
             QApplication.style().objectName(),
             Qt.MatchFixedString
         )
 
-        #設置當前窗口的風格
+        #設置當前視窗的風格
         self.styleComboBox.setCurrentIndex(index)
 
-        #通過combobox控件選擇窗口風格
+        #通過combobox模組選擇視窗風格
         self.styleComboBox.activated[str].connect(self.handlestyleChanged)
 
         self.progress = QProgressBar(self)
         self.progress.setGeometry(0,0,10,10)
 
-        '''QRadioButton
-        self.styleLabel_1=QLabel('Set Style')
-        self.styleLabel_1.setAlignment(Qt.AlignCenter)
+        # QRadioButton
+        self.styleLabel_2=QLabel('Set Style')
+        # self.styleLabel_2.setAlignment(Qt.AlignCenter)
         self.macintosh = QRadioButton(self)
         self.macintosh.setObjectName("macintosh")
         self.macintosh.setText("macintosh")
@@ -108,7 +129,6 @@ class FormWidget(QWidget):
         self.fusion = QRadioButton(self)
         self.fusion.setObjectName("fusion")
         self.fusion.setText("fusion")
-        '''
 
         # Add a button shortcut
         self.btn_download = QPushButton("Download",self)
@@ -117,8 +137,8 @@ class FormWidget(QWidget):
         # self.btn_download.move(150,135)
         self.btn_download.clicked.connect(self.download)
 
-        spacerItem1 = QSpacerItem(0, 40,QSizePolicy.Minimum, QSizePolicy.Expanding)
-        spacerItem2 = QSpacerItem(226, 0, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        # 空間排版物件
+        spacerItem1 = QSpacerItem(0, 0,QSizePolicy.Expanding, QSizePolicy.Expanding)
         #QSizePolicy
         # - Fixed
         # - Minimum
@@ -128,44 +148,52 @@ class FormWidget(QWidget):
         # - Expanding
         # - Ignored
 
-        # 添加控件到佈局，設置窗口佈局
-        self.Vloyout_1.addItem(spacerItem2)
-        '''QRadioBox
-        self.Vloyout_1.addWidget(self.macintosh)
-        self.Vloyout_1.addWidget(self.windows)
-        self.Vloyout_1.addWidget(self.fusion)
-        self.Vloyout_1.addItem(spacerItem1)
-        '''
 
-        self.Hloyout_1.addLayout(self.Vloyout_1)
-        self.Hloyout_1.addLayout(self.Vloyout_2)
-        self.Hloyout_1.addLayout(self.Vloyout_3)
+        # 開始增加模組到主視窗，設置視窗佈置
+        # 將視窗設定水平佈置
+        self.setLayout(self.Hlayout_1)
 
-        self.Vloyout_2.addLayout(self.Hloyout_2)
-        self.Vloyout_2.addLayout(self.Hloyout_3)
-        self.Vloyout_2.addItem(spacerItem1)
+        # 將Hlayout_1分為三份
+        self.Hlayout_1.addLayout(self.Vlayout_1)
+        self.Hlayout_1.addLayout(self.Vlayout_2)
+        self.Hlayout_1.addLayout(self.Vlayout_3)
 
+        # 在最左側的Vlayout_1加入QRadioButton
+        self.Vlayout_1.addWidget(self.styleLabel_2)
+        self.Vlayout_1.addWidget(self.macintosh)
+        self.Vlayout_1.addWidget(self.windows)
+        self.Vlayout_1.addWidget(self.fusion)
+        # 在最左側的Vlayout_1加入spacerItem
+        self.Vlayout_1.addItem(spacerItem1)
 
-        self.Hloyout_2.addWidget(self.styleLabel_2)
-        self.Hloyout_2.addWidget(self.styleComboBox)
+        # 在中間的Vlayout_2加入兩個水平佈置與一個spacerItem
+        self.Vlayout_2.addLayout(self.Hlayout_2)
+        self.Vlayout_2.addLayout(self.Hlayout_3)
+        self.Vlayout_2.addItem(spacerItem1)
 
-        self.Hloyout_3.addWidget(self.progress)
-        self.Hloyout_3.addWidget(self.btn_download)
+        # 在中間Vlayout_2最上方Hlayout_2左側加入文字標籤
+        self.Hlayout_2.addWidget(self.styleLabel_1)
+        # 在中間Vlayout_2最上方Hlayout_2右側加入ComboBox
+        self.Hlayout_2.addWidget(self.styleComboBox)
 
-        self.Vloyout_3.addItem(spacerItem2)
+        # 在中間Vlayout_2最下方Hlayout_3左側加入progressBar
+        self.Hlayout_3.addWidget(self.progress)
+        # 在中間Vlayout_2最下方Hlayout_3右側加入按鈕
+        self.Hlayout_3.addWidget(self.btn_download)
 
-        self.setLayout(self.Hloyout_1)
+        # 在最右側的Vlayout_3加入spacerItem
+        self.Vlayout_3.addItem(spacerItem1)
 
-    #改變窗口風格
+    #改變視窗風格
     def handlestyleChanged(self,style):
         QApplication.setStyle(style)
+        print(QApplication.style().objectName(),
+            Qt.MatchFixedString)
 
     def download(self):
         self.completed = 0
-
         while self.completed < 100:
             self.completed += 0.1
-
             self.progress.setValue(self.completed)
 
     def downloadCompleted(self):
