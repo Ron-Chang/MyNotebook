@@ -91,6 +91,7 @@ class FormWidget(QWidget):
         self.Hlayout_1=QHBoxLayout()
         self.Hlayout_2=QHBoxLayout()
         self.Hlayout_3=QHBoxLayout()
+        #垂直佈局
         self.Vlayout_1=QVBoxLayout()
         self.Vlayout_2=QVBoxLayout()
         self.Vlayout_3=QVBoxLayout()
