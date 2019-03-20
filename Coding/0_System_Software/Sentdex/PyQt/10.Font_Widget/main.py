@@ -1,19 +1,16 @@
 '''
-Tutorial 09 Drop down and Styles
+Tutorial 10 PyQT Font widget
 
-add Drop down menu (ComboBox)
-set OS supported sample style
-set widget in MainWindow, allow to use layout, main menu and tool bar
-set borderless wndowed mode
-set a function to activate ComboBox value
-add layout
+add Font widget
+excluded an issue about macOS can't change the font.
+PyQt5 upgrade to 12.1 or downgrade to 10.1
 '''
 
 import sys
 from PyQt5.QtWidgets import QMessageBox, QPushButton, QProgressBar, QLabel, QComboBox, QSpacerItem, QFontDialog
 from PyQt5.QtWidgets import QStyleFactory, QLabel, QComboBox, QMainWindow, QSizePolicy, QRadioButton
 from PyQt5.QtWidgets import QWidget, QApplication, QAction, QHBoxLayout, QVBoxLayout
-from PyQt5.QtCore import QCoreApplication, Qt
+from PyQt5.QtCore import QCoreApplication, Qt, QRect
 from PyQt5.QtGui import *
 
 class Winodw(QMainWindow):
@@ -53,7 +50,7 @@ class Winodw(QMainWindow):
         self.toolBar_Edit = self.addToolBar("Edit")
         self.toolBar_Edit.addAction(fontChoice)
 
-        self.Label_fontTest = QLabel('TEST\n0123456789')
+        self.Label_fontTest = QLabel('Change:\n0123456789')
         self.toolBar_Edit.addWidget(self.Label_fontTest)
 
         # 設定Main Menu
@@ -103,7 +100,7 @@ class Winodw(QMainWindow):
 
 class FormWidget(QWidget):
 
-    def __init__(self,parent=None):
+    def __init__(self,parent):
         super(FormWidget, self).__init__(parent)
         #水平佈局
         self.Hlayout_1=QHBoxLayout()
@@ -139,6 +136,7 @@ class FormWidget(QWidget):
         # QRadioButton
         self.styleLabel_2=QLabel('Set Style')
         # self.styleLabel_2.setAlignment(Qt.AlignCenter)
+
         self.macintosh = QRadioButton(self)
         self.macintosh.setObjectName("macintosh")
         self.macintosh.setText("macintosh")
@@ -148,6 +146,13 @@ class FormWidget(QWidget):
         self.fusion = QRadioButton(self)
         self.fusion.setObjectName("fusion")
         self.fusion.setText("fusion")
+
+
+
+        # 設定選擇字體
+        self.btn_fontChoice = QPushButton(QIcon("typography.png"), "Font Style", self)
+        self.btn_fontChoice.setShortcut("Ctrl+F")
+        self.btn_fontChoice.clicked.connect(self.fontChoice)
 
         # Add a button shortcut
         self.btn_download = QPushButton("Download",self)
@@ -184,6 +189,7 @@ class FormWidget(QWidget):
         self.Vlayout_1.addWidget(self.fusion)
         # 在最左側的Vlayout_1加入spacerItem
         self.Vlayout_1.addItem(spacerItem1)
+        self.Vlayout_1.addWidget(self.btn_fontChoice)
 
         # 在中間的Vlayout_2加入兩個水平佈置與一個spacerItem
         self.Vlayout_2.addLayout(self.Hlayout_2)
@@ -202,6 +208,13 @@ class FormWidget(QWidget):
 
         # 在最右側的Vlayout_3加入spacerItem
         self.Vlayout_3.addItem(spacerItem1)
+
+    def fontChoice(self):
+        font, valid = QFontDialog.getFont()
+        if valid:
+            self.styleLabel_1.setFont(font)
+            self.styleLabel_2.setFont(font)
+            self.styleComboBox.setFont(font)
 
     #改變視窗風格
     def handlestyleChanged(self,style):
@@ -222,4 +235,3 @@ app = QApplication([])
 foo = Winodw()
 foo.show()
 sys.exit(app.exec_())
-
