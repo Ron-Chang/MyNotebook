@@ -4,7 +4,7 @@
 ## Codeing  
  0_`SYSTEM_&_SOFTWARE`  
 > [Huang/VIM](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Huang/VIM)  
-> [Ron/Bash](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Ron/Bash)
+> [Ron/Bash](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Ron/Bash)  
 > [Sentdex/PyQt](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt)  
 
  1_`PYTHON`  
