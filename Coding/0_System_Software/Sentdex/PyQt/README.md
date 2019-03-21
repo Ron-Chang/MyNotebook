@@ -11,3 +11,5 @@ The is note taking from [Sentdex's tutorial](https://www.youtube.com/watch?list=
 >[08.Progressbar](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/08.Progress_Bars)  
 >[09.Drop Down Menu and Styles](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/09.Drop_downs_n_Styles)  
 >[10.PyQT Font widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/10.Font_Widget)  
+>[11.PyQT Color Picker Widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/11.Color_Picker_Widget)  
+>[12.PyQT Text Editor Widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/12.Text_Editor)  
