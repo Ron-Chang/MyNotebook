@@ -13,3 +13,5 @@ The is note taking from [Sentdex's tutorial](https://www.youtube.com/watch?list=
 >[10.PyQT Font widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/10.Font_Widget)  
 >[11.PyQT Color Picker Widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/11.Color_Picker_Widget)  
 >[12.PyQT Text Editor Widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/12.Text_Editor)  
+>[13.PyQT Text Editor Widget -Open](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/13.Text_Editor_open)  
+>[14.PyQT Text Editor Widget -Save](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/0_System_Software/Sentdex/PyQt/14.Text_Editor_save)  

@@ -1,5 +1,5 @@
 '''
-Tutorial 12 PyQT Text Editor Widget
+Tutorial 14 PyQT Text Editor Widget -Save
 
 add text editor widget
 '''
@@ -15,7 +15,7 @@ class Winodw(QMainWindow):
 
         super(Winodw, self).__init__()
         self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Tutorial 12")
+        self.setWindowTitle("PyQt Tutorial 14")
 
         # ######### 設定行為 #########
         # 脫離
