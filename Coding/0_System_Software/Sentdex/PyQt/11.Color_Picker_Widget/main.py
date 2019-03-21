@@ -1,17 +1,20 @@
 '''
-Tutorial 10 PyQT Font widget
+Tutorial 11 PyQT Color Picker widget
 
-add Font widget
-excluded an issue about macOS can't change the font.
-PyQt5 upgrade to 12.1 or downgrade to 10.1
+add color picker widget
+set PyQt5.QtWidgets.QColor(0,0,0)
+add calendar
 '''
 
 import sys
+"""
 from PyQt5.QtWidgets import QMessageBox, QPushButton, QProgressBar, QLabel, QComboBox, QSpacerItem, QFontDialog
 from PyQt5.QtWidgets import QStyleFactory, QLabel, QComboBox, QMainWindow, QSizePolicy, QRadioButton
-from PyQt5.QtWidgets import QWidget, QApplication, QAction, QHBoxLayout, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QApplication, QAction, QHBoxLayout, QVBoxLayout, QColor, QColorDialog
+"""
 from PyQt5.QtCore import QCoreApplication, Qt, QRect
 from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 class Winodw(QMainWindow):
 
@@ -19,7 +22,7 @@ class Winodw(QMainWindow):
 
         super(Winodw, self).__init__(parent)
         self.setGeometry(100,100,500,300)
-        self.setWindowTitle("PyQt Tutorial 10")
+        self.setWindowTitle("PyQt Tutorial 11")
 
         # 調用 FormWidget 進入MainWindow
         self.form_widget = FormWidget(self)
@@ -34,7 +37,6 @@ class Winodw(QMainWindow):
 
         # 設定選擇字體
         fontChoice = QAction(QIcon("typography.png"), " &Font Style", self)
-        fontChoice.setShortcut("Ctrl+F")
         fontChoice.setStatusTip("Change Font Styles")
         fontChoice.triggered.connect(self.fontChoice)
         # 啟動statusBar
@@ -147,12 +149,19 @@ class FormWidget(QWidget):
         self.fusion.setObjectName("fusion")
         self.fusion.setText("fusion")
 
-
+        # Set Default Color is black R,G,B == 0,0,0
+        color = QColor(0,0,0)
+        btn_fontColor = QPushButton('BG Color', self)
+        btn_fontColor.setShortcut("Shift+P")
+        btn_fontColor.clicked.connect(self.color_picker)
 
         # 設定選擇字體
         self.btn_fontChoice = QPushButton(QIcon("typography.png"), "Font Style", self)
         self.btn_fontChoice.setShortcut("Ctrl+F")
         self.btn_fontChoice.clicked.connect(self.fontChoice)
+
+        cal = QCalendarWidget(self)
+        cal.resize(200,200)
 
         # Add a button shortcut
         self.btn_download = QPushButton("Download",self)
@@ -187,9 +196,12 @@ class FormWidget(QWidget):
         self.Vlayout_1.addWidget(self.macintosh)
         self.Vlayout_1.addWidget(self.windows)
         self.Vlayout_1.addWidget(self.fusion)
-        # 在最左側的Vlayout_1加入spacerItem
-        self.Vlayout_1.addItem(spacerItem1)
+
+        # 加入日曆
+        self.Vlayout_1.addWidget(cal)
+
         self.Vlayout_1.addWidget(self.btn_fontChoice)
+        self.Vlayout_1.addWidget(btn_fontColor)
 
         # 在中間的Vlayout_2加入兩個水平佈置與一個spacerItem
         self.Vlayout_2.addLayout(self.Hlayout_2)
@@ -209,6 +221,12 @@ class FormWidget(QWidget):
         # 在最右側的Vlayout_3加入spacerItem
         self.Vlayout_3.addItem(spacerItem1)
 
+    def color_picker(self):
+        color = QColorDialog.getColor()
+        self.styleLabel_1.setStyleSheet("QWidget { background-color: %s}" % color.name())
+        self.styleLabel_2.setStyleSheet("QWidget { background-color: %s}" % color.name())
+        print(color)
+        print(color.name())
     def fontChoice(self):
         font, valid = QFontDialog.getFont()
         if valid:
@@ -219,8 +237,6 @@ class FormWidget(QWidget):
     #改變視窗風格
     def handlestyleChanged(self,style):
         QApplication.setStyle(style)
-        print(QApplication.style().objectName(),
-            Qt.MatchFixedString)
 
     def download(self):
         self.completed = 0
