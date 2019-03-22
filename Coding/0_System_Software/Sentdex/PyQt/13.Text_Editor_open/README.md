@@ -32,7 +32,8 @@ self.show()
 ```python
 def file_open(self):
     try:
-        name = QFileDialog.getOpenFileName(self, "Open File") # parent to self and the window title is "Open File"
+        name = QFileDialog.getOpenFileName(self, "Open File")
+        # parent to self and the window title is "Open File"
         file = open(name[0], "r")
         with file:
             text = file.read()
