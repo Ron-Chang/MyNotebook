@@ -40,12 +40,13 @@ if __name__ == "__main__":
             print("{} is invalid! Input a integer.".format(usrinput))
             continue
 
-    if int(usrinput) > 100000:
+    great_number = 100000
+    if int(usrinput) > great_number:
         print("\n")
-        print("You input {} it gonna take a while.")
+        print("Your number is bigger than {} it gonna take a while.".format(great_number))
 
-    a = basel(int(usrinput))
+    result = basel(int(usrinput))
     print("\n")
-    print("pi^2/6: {:.50f}".format(math.pi**2/6))
-    print("result: {:.50f}".format(a))
+    print("pi^2/6: {:.52f}".format(math.pi**2/6))
+    print("result: {:.52f}".format(result))
 
