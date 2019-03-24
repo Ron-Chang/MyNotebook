@@ -1,4 +1,4 @@
-# Basic Numpy 2  
+# Basic Numpy 1  
 
 ## What is NumPy?
 NumPy can process image, signal and liner algebra, etc.
