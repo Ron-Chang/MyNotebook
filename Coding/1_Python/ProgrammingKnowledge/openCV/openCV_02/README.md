@@ -103,4 +103,4 @@ Reference:
 [Difference in output with waitKey(0) and waitKey(1)](https://stackoverflow.com/a/51143586)  
 weixin_42480593 - [if cv2.waitKey(1) & 0xFF == ord('q')分析](https://blog.csdn.net/weixin_42480593/article/details/82751180)  
 [isColor](https://docs.opencv.org/3.4/dd/d9e/classcv_1_1VideoWriter.html)  
-Support Codec on macOS - [OpenCV Video Writer on Mac OS X](https://gist.github.com/takuma7/44f9ecb028ff00e2132e)  
+Supported Codec on macOS - [OpenCV Video Writer on Mac OS X](https://gist.github.com/takuma7/44f9ecb028ff00e2132e)  
