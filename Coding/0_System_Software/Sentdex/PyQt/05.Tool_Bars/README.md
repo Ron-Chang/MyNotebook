@@ -1,6 +1,6 @@
 # Tutorial 05 - Tool Bars
 
-1. Understand how to addToolBar and QIcon
+## 1. Understand how to addToolBar and QIcon
 ```python
 '''
 class Window(QMainWindow):
@@ -49,3 +49,13 @@ class Window(QMainWindow):
         self.show()
 ```
 
+## 2. Change toolbar background colour [Reference](https://stackoverflow.com/a/13695275Z)  
+You can do something like this to style a QToolTip in general.  
+```ptyhon
+QToolTip { color: #fff; background-color: #000; border: none; }
+```
+When you need to style QToolTips specifically, based on their parent widget you can use following syntax:  
+```python
+ParentWidgetName QToolTip { color: #333; background-color: #1c1c1c; border: none; }
+```
+[Reading this](https://doc.qt.io/qt-5/stylesheet.html) will help you further.  
