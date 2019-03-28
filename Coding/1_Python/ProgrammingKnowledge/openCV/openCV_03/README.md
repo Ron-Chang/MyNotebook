@@ -1,5 +1,5 @@
-### Basic openCV - 02
-## How to read, write and show videos from camera in openCV
+### Basic openCV - 03
+## Draw geometric shapes on images
 
 ### 1. Import a image with `cv2.imread("filename", color flag)` or create with `numpy`.  
 
