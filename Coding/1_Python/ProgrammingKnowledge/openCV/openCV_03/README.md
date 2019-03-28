@@ -1,106 +1,49 @@
 ### Basic openCV - 02
 ## How to read, write and show videos from camera in openCV
 
-### 1. Import a video with `cv2.VideoCapture(Flag)`.  
+### 1. Import a image with `cv2.imread("filename", color flag)` or create with `numpy`.  
 
 ```python
+import numpy as np
 import cv2
 
-cap = cv2.VideoCapture(0)
-# cv2.VideoCapture('Filename.mov') to load a video.
-# cv2.VideoCapture(Flage=integer)
-# Flag = 0 or -1 means loading default camera, It's depending on your device.
-# Flag = 1 to load secondary camera.
+# img = cv2.imread('lena.jpg', 1)
+
+#  To create a black image through numpy
+img = np.zeros([512,512,3], np.uint8)
 ```
-### 2. Get properties width and height and assign a new variable.  
+### 2. Add geometric shapes on images.  
 
 ```python
-# Get properties width and height
-cap_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-cap_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+# Add a line
+img = cv2.line(img, (0,0), (255,255), (181,74,84), 10)
+# cv2.line(img, pt1, pt2, color(BGR), thickness, lineType, shift)
+# Be aware of the color parameter the colour order is Blue Green Red
 
-# Assign the resolution to frameSize
-frameSize = (cap_width,cap_height)
+# Add an arrow
+img = cv2.arrowedLine(img, (0,255), (255,255), (148,36,249), 10)
+
+# Add a rectangle
+img = cv2.rectangle(img, (300,0), (510,128), (0,200,200), -1)
+# cv2.rectangle(img, pt1, pt2, color, thickness, lineType, shift)
+# pt1 is top-left and pt2 is bottom-right
+# if thickness < 0, it will show a filled rectangle.
+
+img = cv2.circle(img, (255,255), 50, (0,0,180), 7)
+# img = cv2.circle(img, center, radius, color, thickness, lineType, shift)
+
+# Add a font style and text
+fontFace = cv2.FONT_HERSHEY_SIMPLEX
+img = cv2.putText(img, "openCV", (120,440), fontFace, 3, (0,230,0), 4,cv2.LINE_8)
+# cv2.putText(img, text, org, fontFace, fontScale, color, thickness, lineType, bottomLeftOrigin)
+# LineType = (FILLED, LINE_4: 4-connected line, LINE_8: 8-connected line, LINE_AA: antialiased line)
 ```
 
-### 3.Get a codec from fourcc for write a video 
+### 3.Show the image, make it loop unless you pressed any key. 
 
 ```python
-fourcc = cv2.VideoWriter_fourcc('m','p','4','v')
-# It equals
-# fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-```
-### 4. Write a video to a file with `cv2.VideoWriter(filename,fourcc,fps,frameSize,isColor)`.  
+cv2.imshow('Window Title', img)
 
-isColor  
->If it is not zero, the encoder will expect and encode color frames,otherwise it will work with grayscale frames.  
-*__(the flag is currently supported on `Windows` only)__*  
-
-```python
-out = cv2.VideoWriter("output.mov", fourcc, 20.0, frameSize)
-# It equals
-# out = cv2.VideoWriter()
-# success = out.open("output.mov", fourcc, 20.0, frameSize,True)
-
-# cv2.VideoWriter(filename, fourcc, fps, frameSize, isColor)
-```
-### 5. Make the video capture continue and Check the video is capable with isOpened().  
-```python
-while cap.isOpened():
-    ret, frame = cap.read()
-    # type(cap.read()) = <class 'tuple'>
-    # cap.read() = (True, array())
-
-    if ret == True:
-        # Write the frame into out
-        out.write(frame)
-
-        # Convert to grayscale video
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        # cvtColor stand for convert to color
-        # cv2.cvtColor(src, code, dst, dstCn)
-
-        # Show the video
-        cv2.imshow('Window Title', gray)
-
-        # Once we pressed 'q' key then break while loop
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-    else:
-        # ret is Fales
-        # It means video has some loading issues, then we break loop
-        break
-```
-### 5. Release capturing, writing and closing all windows.  
-
-```python
-cap.release()
-out.release()
+cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-
-### \#1 cv2.waitKey(delay) [From the doc](https://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html?highlight=waitkey)  
-
-1.`waitKey(0)` will display the window `infinitely` until any keypress (it is suitable for image display).  
-
-2.`waitKey(1)` will display a frame for `1 ms`, after which display will be automatically closed.  
-
-So, if you use waitKey(0) you see a still image until you actually press something while for waitKey(1) the function will show a frame for 1 ms only.  
-
-
-### \#2  `if cv2.waitKey(1) & 0xFF == ord('q'):`  
-
-waitKey(1) 中的數字代表等待按鍵輸入之前的無效時間，單位為毫秒，在這個時間段內按鍵 ‘q’ 不會被記錄，在這之後按鍵才會被記錄，並在下一次進入if語段時起作用。也即經過無效時間以後，檢測在上一次顯示圖像的時間段內按鍵 ‘q’ 有沒有被按下，若無則跳出if語句段，捕獲並顯示下一幀圖像。
-
-若此參數置零，則代表在捕獲並顯示了一幀圖像之後，程序將停留在if語句段中一直等待 ‘q’ 被鍵入。
-
-cv2.waitKey(1) 與 0xFF（1111 1111）相與是因為cv2.waitKey(1) 的返回值不止8位，但是只有後8位實際有效，為避免產干擾，通過 ‘與’ 操作將其餘位置0。
-
-
-Reference:  
-[OpenCV Python Tutorial For Beginners](https://www.youtube.com/watch?v=TGQcDaZ56ao)  
-[VideoCaptureProperties](https://docs.opencv.org/4.0.0/d4/d15/group__videoio__flags__base.html#gaeb8dd9c89c10a5c63c139bf7c4f5704d)  
-[Difference in output with waitKey(0) and waitKey(1)](https://stackoverflow.com/a/51143586)  
-weixin_42480593 - [if cv2.waitKey(1) & 0xFF == ord('q')分析](https://blog.csdn.net/weixin_42480593/article/details/82751180)  
-[isColor](https://docs.opencv.org/3.4/dd/d9e/classcv_1_1VideoWriter.html)  
-Supported Codec on macOS - [OpenCV Video Writer on Mac OS X](https://gist.github.com/takuma7/44f9ecb028ff00e2132e)  
