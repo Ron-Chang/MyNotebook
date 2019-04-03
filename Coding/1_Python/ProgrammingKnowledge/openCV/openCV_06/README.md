@@ -1,4 +1,4 @@
-### Basic openCV - 05  
+### Basic openCV - 06  
 ## Mouse events I  
 
 ### 1. Check openCV avalible events  
