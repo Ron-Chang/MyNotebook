@@ -1,4 +1,4 @@
-from openpyxl import Workbook, load_workbook
+from openpyxl import Workbook, load_workbook, styles
 import random
 import datetime as dt
 
@@ -74,6 +74,30 @@ for i in range(0,len(words)):
     print(i)
     foo.value = words[i]
 
+# 單元格對齊
+ws.cell(row=11, column=11).value = "CENTER"
+align_center = styles.Alignment(horizontal = "center", vertical = "center")
+ws.cell(row=11, column=11).alignment = align_center
+
+# 合併單行儲存格
+# 只有起始格的資料會留下,不會置中
+ws.cell(10, 11).value = "merge_single_line"
+ws.merge_cells("K10:M10")
+# 合併多行儲存格
+ws.cell(6, 11).value = "merge_multi-line"
+ws.merge_cells(start_row=6,start_column=11,end_row=9,end_column=15)
+
+# 移除表單
+wb.remove_sheet(ws1)
+
+# 插入列行
+ws.insert_rows(3)
+
+# 移除列行
+ws.delete_cols(4,3)
+
+# 移動單行儲存格
+ws.move_range("B3:D4",rows = 2, cols = 9)
 
 # 儲存工作簿
 wb.save('test.xlsx')
