@@ -9,7 +9,8 @@
 
  1_`PYTHON`  
 > [Ron/Python3_and_SublimeText3_Settings](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Ron/0_Introduction/00_Python_3_DevEnv.md)  
-> [Ron/Trials_and_Materials](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/Trials_and_Materials)
+> [Ron/Trials_and_Materials](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/Trials_and_Materials)  
+> [Ron/PyQt/Table_Widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/Modules/PyQt/Table_Widget)  
 
 > [Huang/OOP](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/OOP)  
 > [Huang/decorator](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/decorator)  
