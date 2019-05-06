@@ -66,14 +66,14 @@ class Window(QtWidgets.QWidget):
 
         row_index = self.table.currentRow()
 
+        if row_index != -1:
+            choice = QtWidgets.QMessageBox.question(self, "Delete",
+                                                    "Delete the {} row?".format(row_index+1),
+                                                    QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
+            if choice == QtWidgets.QMessageBox.Yes:
+                print("刪除所選第{}列: ".format(row_index+1))
+                self.table.removeRow(row_index)
 
-        if row_index == -1:
-            rowPosition = self.table.rowCount()
-            print("為選擇,刪除最後一列,即第{}列: ".format(rowPosition))
-            self.table.removeRow(rowPosition-1)
-        else:
-            print("刪除所選第{}列: ".format(row_index+1))
-            self.table.removeRow(row_index)
 
 
 if __name__ == "__main__":
