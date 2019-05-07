@@ -2,16 +2,16 @@ def printInfo():
 
     print("_"*78)
 
-    trick_01 = "    -1. In short [if else] statement."
-    trick_02 = "    -2. Make a large number easy to read."
-    trick_03 = "    -3. Open a file with [Contents Manager]."
-    trick_04 = "    -4. Packing a list with the index through [enumerate]."
-    trick_05 = "    -5. Packing two lists with [zip]."
-    trick_06 = "    -6. Unpacking two lists with [zip]."
-    trick_07 = "    -7. Unpacking two lists with [zip]."
-    trick_08 = "    -8. Unpacking two lists with [zip]."
-    trick_09 = "    -9. Unpacking two lists with [zip]."
-    trick_10 = "    -10. Unpacking two lists with [zip]."
+    trick_01 = "    - 1. In short [if else] statement."
+    trick_02 = "    - 2. Make a large number easy to read."
+    trick_03 = "    - 3. Open a file with [Context Manager]."
+    trick_04 = "    - 4. Packing a list with the index through [enumerate]."
+    trick_05 = "    - 5. Packing two lists with [zip]."
+    trick_06 = "    - 6. Unpacking values."
+    trick_07 = "    - 7. Set dynamic attributes with [setattr] and [getattr]."
+    trick_08 = "    - 8. Hide password input with [getpass]."
+    trick_09 = "    - 9. Set a virtual enviroment to hide logging info."
+    trick_10 = "    -10. Check documentation through [help()] or [dir()]."
 
 
     info = [
@@ -259,16 +259,126 @@ print(d)
     print(j)
 
 def trick_g():
-    print("trick_g")
+    x = """  - A:
+class Person():
+    pass
+
+person = person()
+person.first = "Ron"
+person.last = "Chang"
+
+print(person.first)
+print(person.last)
+
+# Output:
+Ron
+Chang
+"""
+    y = """  - B:
+class Person():
+    pass
+
+person = Person()
+first_key = "first"
+first_val = "Ron"
+# person.first_key = first_val
+# This is not what we need
+
+setattr(person, first_key, first_val)
+# setattr(obj, name, value)
+first = getattr(person, first_key)
+# getattr(object, name, default)
+print(first)
+
+# Output: Ron
+"""
+    i = """  - C:
+class Person():
+    pass
+
+person = Person()
+person_info = {"first": "Ron", "last": "Chang"}
+for key, value in person_info.items():
+    setattr(person, key, value)
+
+print(person.first)
+print(person.last)
+
+# Output:
+Ron
+Chang
+"""
+
+    j = """  - D:
+class Person():
+    pass
+
+person = Person()
+person_info = {"first": "Ron", "last": "Chang"}
+for key, value in person_info.items():
+    setattr(person, key, value)
+
+for key in person_info.keys():
+    print(getattr(person, key))
+
+# Output:
+Ron
+Chang"""
+
+    print(x)
+    print(y)
+    print(i)
+    print(j)
 
 def trick_h():
-    print("trick_h")
+    x = """  - A:
+username = input("Username: ")
+password = input("Password: ")
+print("Logging In...")
+"""
+    y = """  - B:
+from getpass import getpass
+
+username = input("Username: ")
+password = getpass("Password: ")
+print("Logging In...")
+
+# While you insert a password it wont show on the screen.
+"""
+    print(x)
+    print(y)
 
 def trick_i():
-    print("trick_i")
+    x = """  - How:
+# Edit [.zshrc] or [.bash_profile] insert information as
+# export DB_USER="any_username"
+# export DB_PASS="any_password"
+# # No gap between equal sign
+
+import os
+
+username = os.environ.get("DB_USER")
+password = os.environ.get("DB_PASS")
+print(username)
+print(password)
+print("Logging In...")
+"""
+    link = "Tutorial: https://youtu.be/5iWhQWVXosU"
+
+    print(x)
+    print(link)
 
 def trick_j():
-    print("trick_j")
+    x = """  - How:
+import numpy as np
+
+# Check the full documentation
+help(np) # hit "q" to extract
+
+# Check avalible attributes
+dir(np)
+"""
+    print(x)
 
 
 def main():
@@ -297,7 +407,7 @@ def main():
             functionTuple[int(usrinput)]()
 
             print()
-            pause = input("Press anything to continue...")
+            pause = input("* Press [Enter] to continue...\r")
         else:
             print("\nInvalid Input!\n")
 
@@ -308,3 +418,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
