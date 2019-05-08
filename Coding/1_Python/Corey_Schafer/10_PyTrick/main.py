@@ -1,3 +1,5 @@
+import sys, os
+
 def printInfo():
 
     print("_"*78)
@@ -79,8 +81,7 @@ num_1 = 10000000000
 num_2 = 100000000
 
 num_a = 10_000_000_000
-num_b = 100_000_000
-"""
+num_b = 100_000_000"""
 
     y = """
   Use \"f\" string to format a great number.
@@ -343,8 +344,8 @@ username = input("Username: ")
 password = getpass("Password: ")
 print("Logging In...")
 
-# While you insert a password it wont show on the screen.
-"""
+# While you insert a password it wont show on the screen."""
+
     print(x)
     print(y)
 
@@ -405,16 +406,15 @@ def main():
         if usrinput in options:
             print("-"*78)
             functionTuple[int(usrinput)]()
-
             print()
-            pause = input("* Press [Enter] to continue...\r")
+            os.system('read -s -n 1 -p "Press any key to continue..."\r')
+            # pause = input("* Press [Enter] to continue...\r")
         else:
-            print("\nInvalid Input!\n")
-
-
-
-
-
+            invalidInfo = "/ Invalid Input! /"
+            invalidInfoLen = len(invalidInfo)
+            print("\t\t\t "+"⎽"*(invalidInfoLen-1))
+            print("\t\t\t"+invalidInfo)
+            print("\t\t\t"+"⎺"*(invalidInfoLen-1)+" ")
 
 if __name__ == "__main__":
     main()
