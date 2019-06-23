@@ -1,0 +1,12 @@
+The is note taking from [Corey Schafer's tutorial](https://www.youtube.com/watch?v=UO98lJQ3QGI&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_)  
+
+>[01_First Plots](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/01_first_plots)  
+>[02_Bar Charts and Analyzing Data from CSVs](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/02_barCharts_CSVs)  
+>[03_Pie Charts](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/03_pieCharts)  
+>[04_Stack Plots](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/04_stackPlots)  
+>[05_Filling Area on Line Plots](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/05_fillingArea_linePlots)  
+>[06_Histograms](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/06_histograms)  
+>[07_Scatter Plots](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/07_scatterPlots)  
+>[08_Plotting Time Series Data](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/08_plottingTime_seriesData)  
+>[09_Plotting Live Data in Real-Time](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/09_realTimeData)  
+>[10_Subplots](MyNotebook/Coding/1_Python/Corey_Schafer/Matplotlib/10_subplots)  

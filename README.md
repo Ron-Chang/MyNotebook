@@ -12,6 +12,8 @@
 > [Ron/Trials_and_Materials](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/Trials_and_Materials)  
 > [Ron/PyQt/Table_Widget](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Ron/Modules/PyQt/Table_Widget)  
 
+> [Corey Schafer/Matplotlib](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Corey_Schafer/Matplotlib)  
+
 > [Huang/OOP](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/OOP)  
 > [Huang/decorator](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Huang/decorator)  
 
