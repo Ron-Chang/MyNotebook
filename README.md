@@ -27,6 +27,8 @@
 >> [Basic Numpy (ProgrammingKnowledge)](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/ProgrammingKnowledge/NumPy)  
 >> [Basic openpyxl](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Ron/Modules/openpyxl/note-taking.pdf) by [LeeLom](https://www.jianshu.com/p/642456aa93e2)  
 >> [10 PyTrick](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Corey_Schafer/10_PyTrick) by [Corey Schafer](https://youtu.be/C-gEQdGVXbk)  
+>> [Virtual Enviroment](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Corey_Schafer/venv) by [Corey Schafer](https://youtu.be/Kg1Yvry_Ydk)  
+>> [Unit Testing](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Corey_Schafer/Unit_test) by [Corey Schafer](https://youtu.be/6tNS--WetLI)  
 
  2_`Web`
 > [Jake_Wright/HTML_basic_in_12_Mins/](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/2_Web/html_CSS/Jake_Wright%20/HTML_basic_in_12_Mins)  
