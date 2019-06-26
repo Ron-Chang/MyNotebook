@@ -14,14 +14,14 @@ multiple way to load the csv file
  - load csv method from numpy
 """
 
-# standard csv module
-with open("data.csv") as csv_file:
-    csv_reader = csv.DictReader(csv_file)
+# # standard csv module
+# with open("data.csv") as csv_file:
+#     csv_reader = csv.DictReader(csv_file)
 
-    language_counter = Counter()
+#     language_counter = Counter()
 
-    for row in csv_reader:
-        language_counter.update(row["LanguagesWorkedWith"].split(";"))
+#     for row in csv_reader:
+#         language_counter.update(row["LanguagesWorkedWith"].split(";"))
 
 # # panda module
 data = pd.read_csv("data.csv")
