@@ -1,6 +1,6 @@
 # Multiple Datas
 
-__*It's a way to create plots on the different axis. It may or may not show on the same window.*__
+__*It's a way to create plots on the different axis to display on the same or the separate window.*__
 
 ## KEY
 ```python
