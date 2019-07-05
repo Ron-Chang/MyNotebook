@@ -13,7 +13,15 @@ rows, cols, channels = python_logo.shape
 # np.shape = (rows=y, cols=x, each elements data depth)
 
 roi = img_1[0:rows, 0:cols]
-# From img_1 top-left(0) to bottom-left(rows), top-left(0) to top-right(cols)
+# roi stand for Region of interest(in digital images).
+"""
+top-left(0,0) to bottom-left(rows,0), top-left(0,0) to top-right(0,cols)
+(A to C, A to B)
+A-------B
+|       |
+|       |
+C-------D
+"""
 
 # Convert the color to the grayscale
 logo2gray = cv2.cvtColor(python_logo, cv2.COLOR_BGR2GRAY)
