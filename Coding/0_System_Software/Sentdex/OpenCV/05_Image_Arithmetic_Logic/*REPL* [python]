@@ -1,6 +1,0 @@
-Python 3.7.3 (default, Mar 27 2019, 09:23:15)
-[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import pandas as pd
->>> import numpy as np
->>> foo = [[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]]

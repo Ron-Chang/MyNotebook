@@ -223,3 +223,7 @@ Class
 
 __*instance variable == class member*__`#成員變量`  
 __*method is a function in the class*__`#類中的函式稱為方法`
+
+
+[張凱喬-關於Python的類別(Class)](https://medium.com/@weilihmen/關於python的類別-class-基本篇-5468812c58f2)
+[幼稚鬼學編程-面向對象編程（oop）](https://kknews.cc/zh-tw/other/3or68xa.html)
