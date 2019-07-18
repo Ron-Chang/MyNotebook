@@ -29,6 +29,7 @@
 >> [10 PyTrick](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/1_Python/Corey_Schafer/10_PyTrick) by [Corey Schafer](https://youtu.be/C-gEQdGVXbk)  
 >> [Virtual Enviroment](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Corey_Schafer/venv) by [Corey Schafer](https://youtu.be/Kg1Yvry_Ydk)  
 >> [Unit Testing](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/1_Python/Corey_Schafer/Unit_test) by [Corey Schafer](https://youtu.be/6tNS--WetLI)  
+>> [git](https://github.com/Ron-Chang/MyNotebook/blob/master/Coding/0_System_Software/Ron/git/README.md)  
 
  2_`Web`
 > [Jake_Wright/HTML_basic_in_12_Mins/](https://github.com/Ron-Chang/MyNotebook/tree/master/Coding/2_Web/html_CSS/Jake_Wright%20/HTML_basic_in_12_Mins)  
