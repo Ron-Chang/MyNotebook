@@ -136,7 +136,7 @@ git checkout commit.id -- file.py
 ## 重新定義參考基準[rebase] (接枝)  
 >[What is rebase?](https://blog.yorkxin.org/2011/07/29/git-rebase.html)  
 
-```python
+```bash
 # step 1
 (C1)--------------------(C3)-----[Branch A]--->
     \______(C2)___(C4)___[Branch B]--->
