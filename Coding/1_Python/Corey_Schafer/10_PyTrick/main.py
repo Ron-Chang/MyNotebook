@@ -351,7 +351,7 @@ print("Logging In...")
 
 def trick_i():
     x = """  - How:
-# Edit [.zshrc] or [.bash_profile] insert information as
+# Edit [.bash_profile] insert information as
 # export DB_USER="any_username"
 # export DB_PASS="any_password"
 # # No gap between equal sign
