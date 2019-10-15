@@ -13,40 +13,40 @@ import threading
 
 # #  equivalent the following function
 
-def adding_2():
+def adding_2(COUNT):
     global x
-    with lock:
-        for i in range(COUNT):
-            x += 2
+    # with lock:
+    for i in range(COUNT):
+        x += 2
 
-def adding_3():
+def adding_3(COUNT):
     global x
-    with lock:
-        for i in range(COUNT):
-            x += 3
+    # with lock:
+    for i in range(COUNT):
+        x += 3
 
-def subtracting_4():
+def subtracting_4(COUNT):
     global x
-    with lock:
-        for i in range(COUNT):
-            x -= 4
+    # with lock:
+    for i in range(COUNT):
+        x -= 4
 
-def subtracting_1():
+def subtracting_1(COUNT):
     global x
-    with lock:
-        for i in range(COUNT):
-            x -= 1
+    # with lock:
+    for i in range(COUNT):
+        x -= 1
 
 if __name__ == '__main__':
 
     x = 0
     COUNT = 100000
-    lock = threading.Lock()
+    # lock = threading.Lock()
 
-    t1 = threading.Thread(target=adding_2, name='thread_add_2')
-    t2 = threading.Thread(target=subtracting_4, name='thread_sub_4')
-    t3 = threading.Thread(target=adding_3, name='thread_add_3')
-    t4 = threading.Thread(target=subtracting_1, name='thread_sub_1')
+    t1 = threading.Thread(target=adding_2, name='thread_add_2', args=(COUNT,))
+    t2 = threading.Thread(target=subtracting_4, name='thread_sub_4', args=(COUNT,))
+    t3 = threading.Thread(target=adding_3, name='thread_add_3', args=(COUNT,))
+    t4 = threading.Thread(target=subtracting_1, name='thread_sub_1', args=(COUNT,))
     # x = 0+2-4+3-1 = 0
 
     t1.start()

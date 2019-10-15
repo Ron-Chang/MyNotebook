@@ -8,17 +8,19 @@ def sleeper(n, name):
     time.sleep(n)
     print(f"{name} has woken up from sleep")
 
-threads_list = list()
+threads = list()
 
 start = time.time()
 for i in range(5):
     t = threading.Thread(target = sleeper, name = f'thread{i}', args = (2, f'thread_{i}'))
-    threads_list.append(t)
+    threads.append(t)
     t.start()
     print(f'{t.name} has started')
 
-for t in threads_list:
+for t in threads:
+    print(f'{t.getName()} before join.')
     t.join()
+    print(f'{t.getName()} finished!')
     # 阻塞主執行緒執行
 print(f' CONSUME: {time.time()-start} sec.')
 print('All threads have finished their jobs .')
