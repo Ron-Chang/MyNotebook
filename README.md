@@ -1,6 +1,5 @@
 # My Notebook  
 <p align="right">by <a href="https://github.com/Ron-Chang">Ron Chang</a></p>
-/play letitgo  
 
 ## Codeing  
  0_`SYSTEM_&_SOFTWARE`  
